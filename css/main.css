@@ -111,10 +111,6 @@ nav .elements li{
     display: flex;
     justify-content: space-around;
     }   
-    #ham{
-        display: flex;
-        align-items: center;
-    }
     #caption{
         margin-right: auto;
     }
@@ -123,7 +119,7 @@ nav .elements li{
     display: none;
 }
 
-@media screen and  (max-width:1400px){
+@media screen and  (min-width:1400px){
     #socials a{
         padding: 1px 12em;
     }
@@ -132,24 +128,27 @@ nav .elements li{
 #navbar{
     background: #1c1b20;
     color:#fff !important;
-    position: absolute; 
-    left: 0;
+    position: fixed;
+    display: noneF; 
+    left: 100vh;
     height: 100%;
     width: 0;
     transition: 1.5s ease-in-out;
     overflow: hidden;
-    padding-top: 10%;
     opacity: 0.6;
    
 }
 
-#ham{
-    z-index: 2;
+.ham{
+    z-index: 1;
+    display: none;
+    align-items: center;
+
 }
 
 
 @media screen and (min-width:800px){
-#ham{
+.ham i{
     display: none;
 }
 
@@ -430,7 +429,7 @@ grid-template-columns: repeat(1,1fr);
 }
 
 #socials{
-    margin: 4em;
+    margin: 5px 3em;
     margin-right: 4em !important;
     margin-top: unset;
     padding: 3em;
@@ -450,7 +449,6 @@ grid-template-columns: repeat(1,1fr);
 #socials a:last-child{
     display: flex;
     justify-content: center;
-    margin: auto;
 }
 @media screen and (min-width:900px){
     #pricecards{
